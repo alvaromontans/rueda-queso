@@ -6,26 +6,26 @@
  * entrega prioritaria. También calcula el precio total del pedido, incluyendo un cargo adicional
  * por entrega prioritaria si se selecciona.
  *
- * @componente
+ * @component
  * @returns {JSX.Element} El componente CreateOrder renderizado.
  *
- * @notas
+ * @description
  * - Si el carrito está vacío, el componente muestra un mensaje `EmptyCart`.
  * - El envío del formulario se maneja utilizando el hook `useSubmit` de React Router.
  * - La obtención de la dirección se gestiona a través de Redux y la acción `fetchAddress`.
  *
- * @ejemplo
+ * @example
  * ```tsx
  * <CreateOrder />
  * ```
  *
- * @dependencias
+ * @dependencies
  * - React Router DOM: `Form`, `useNavigation`, `useSubmit`
  * - Redux: `useAppDispatch`, `useAppSelector`
  * - Componentes UI personalizados: `Button`, `InputField`, `AddressField`, `PriorityCheckbox`, `HiddenFields`
  * - Funciones utilitarias: `calculateEstimatedDelivery`, `formatCurrency`, `validatePhone`
  *
- * @estado
+ * @state
  * - `errors`: Un objeto que contiene errores de validación para los campos del formulario.
  * - `withPriority`: Un booleano que indica si el usuario ha seleccionado entrega prioritaria.
  *
@@ -38,11 +38,11 @@
  * - `cart`: Los artículos actuales en el carrito del usuario.
  * - `totalCartPrice`: El precio total de los artículos en el carrito.
  *
- * @funciones
+ * @functions
  * - `handleSubmit`: Maneja el envío del formulario, valida el número de teléfono y envía los datos del formulario.
  * - `handleAddress`: Despacha la acción `fetchAddress` para obtener la dirección del usuario.
  *
- * @estadosDeCarga
+ * @estateLoaders
  * - `isSubmitting`: Indica si el formulario se está enviando actualmente.
  * - `isLoadingAddress`: Indica si la dirección se está obteniendo actualmente.
  */

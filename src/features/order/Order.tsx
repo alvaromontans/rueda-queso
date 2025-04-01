@@ -5,22 +5,22 @@
  * automáticamente el estado del pedido en función del tiempo de entrega. También muestra los detalles
  * del pedido, incluidos los artículos del carrito, precios y estado de prioridad.
  *
- * @componente
+ * @component
  *
  * @returns {JSX.Element} El componente Order renderizado.
  *
- * @notas
+ * @description
  * - El componente utiliza `useLoaderData` para obtener los datos iniciales del pedido.
  * - Utiliza `useFetcher` para obtener datos adicionales (por ejemplo, elementos del menú) y enviar actualizaciones del estado del pedido.
  * - Las cuentas regresivas de entrega se gestionan utilizando hooks `useEffect`.
  * - El estado del pedido se actualiza automáticamente a "En camino" y "Entregado" según la cuenta regresiva de entrega.
  *
- * @ejemplo
+ * @example
  * ```tsx
  * <Order />
  * ```
  *
- * @dependencias
+ * @dependencies
  * - `react-router-dom` para la obtención y envío de datos.
  * - `useEffect` y `useState` de React para el estado y efectos secundarios.
  * - Funciones auxiliares de `../../utils/helpers` para formateo y cálculos.
@@ -31,7 +31,7 @@
  * - `useFetcher`: Obtiene datos del menú y envía actualizaciones del estado del pedido.
  * - `useEffect`: Gestiona efectos secundarios para obtener datos, actualizar cuentas regresivas de entrega y actualizar automáticamente el estado del pedido.
  *
- * @estado
+ * @state
  * - `orderSendTime` (número): El tiempo (en minutos) antes de la entrega cuando el estado del pedido debe actualizarse a "En camino".
  * - `deliveryIn` (número): El tiempo restante (en minutos) hasta la entrega.
  *
@@ -44,9 +44,9 @@
  * @param {string} order.estimated_delivery - El tiempo estimado de entrega en formato ISO.
  * @param {Cart[]} order.cart - La lista de artículos en el pedido.
  *
- * @componenteHijo {OrderItem} Renderiza artículos individuales en el carrito del pedido.
- * @componenteHijo {UpdateOrder} Permite actualizar el tiempo de entrega para pedidos no prioritarios.
- * @componenteHijo {DeleteOrder} Permite eliminar el pedido después de que haya sido entregado.
+ * @childComponent {OrderItem} Renderiza artículos individuales en el carrito del pedido.
+ * @childComponent {UpdateOrder} Permite actualizar el tiempo de entrega para pedidos no prioritarios.
+ * @childComponent {DeleteOrder} Permite eliminar el pedido después de que haya sido entregado.
  */
 import { useFetcher, useLoaderData } from "react-router-dom";
 import {

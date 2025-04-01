@@ -1,7 +1,7 @@
 /**
  * Componente que representa un elemento individual de un pedido en una lista.
  *
- * @componente
+ * @component
  * @param {OrderItemProps} props - Las propiedades para el componente `OrderItem`.
  * @param {Cart} props.item - El elemento del carrito que contiene detalles como cantidad, nombre y precio total.
  * @param {number} props.item.quantity - La cantidad del artículo pedido.

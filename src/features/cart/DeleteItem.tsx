@@ -1,7 +1,7 @@
 /**
  * Componente para eliminar un elemento del carrito.
  *
- * @componente
+ * @component
  * @param {DeleteItemProps} props - Las props para el componente DeleteItem.
  * @param {number} props.pizzaId - El ID de la pizza que se eliminará del carrito.
  * @returns {JSX.Element} Un botón que activa la eliminación del elemento de pizza especificado.

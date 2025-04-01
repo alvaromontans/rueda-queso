@@ -1,7 +1,7 @@
 /**
  * Componente para actualizar la prioridad de un pedido y el tiempo estimado de entrega.
  *
- * @componente
+ * @component
  * @param {Object} props - Las propiedades del componente UpdateOrder.
  * @param {string} props.estimatedDelivery - La fecha estimada de entrega actual como cadena.
  * @param {function} props.onSetDeliveryIn - Función de devolución de llamada para actualizar el tiempo de entrega en minutos.
@@ -9,12 +9,12 @@
  *
  * @returns {JSX.Element} Un formulario con un botón para priorizar el pedido.
  *
- * @descripción
+ * @description
  * Este componente permite a los usuarios priorizar un pedido reduciendo a la mitad el tiempo de entrega
  * y actualizando la fecha estimada de entrega. Utiliza el hook `useFetcher` de
  * `react-router-dom` para enviar los datos actualizados mediante una solicitud PATCH.
  *
- * @ejemplo
+ * @example
  * ```tsx
  * <UpdateOrder
  *   estimatedDelivery="2023-10-15T12:00:00Z"

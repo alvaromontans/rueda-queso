@@ -2,7 +2,7 @@
  * Un componente funcional de React que renderiza campos de entrada ocultos para el envío de formularios.
  * Serializa las props `cart` y `position` en campos de entrada ocultos.
  *
- * @componente
+ * @component
  * @param {HiddenFieldsProps} props - Las props para el componente.
  * @param {Cart[]} props.cart - Un array de elementos del carrito que se serializan en un campo de entrada oculto.
  * @param {{ latitude?: number; longitude?: number }} props.position - Un objeto que contiene valores opcionales de latitud y longitud.
