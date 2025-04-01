@@ -1,50 +1,59 @@
-# React + TypeScript + Vite
+# Fast React Pizza Co
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+¡Bienvenido al proyecto **Fast React Pizza Co.**! Esta es una aplicación basada en React diseñada para gestionar y mostrar un sistema de pedidos de pizza. El proyecto está construido con prácticas modernas de desarrollo web y tiene como objetivo proporcionar una experiencia de usuario fluida.
 
-Currently, two official plugins are available:
+## Tabla de Contenidos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Características](#características)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Tecnologías Utilizadas](#tecnologías-utilizadas)
 
-## Expanding the ESLint configuration
+## Características
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Visualización dinámica del menú de pizzas.
+- Agregar, editar y eliminar elementos del carrito.
+- Diseño responsivo para usuarios móviles y de escritorio.
+- Gestión de estado utilizando hooks de React.
+- Renderizado rápido y eficiente con React.
 
-- Configure the top-level `parserOptions` property like this:
+## Instalación
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
+1. Clona el repositorio:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+   ```bash
+   git clone https://github.com/your-username/fast-react-pizza.git
+   ```
 
-```js
-// eslint.config.js
-import react from "eslint-plugin-react";
+2. Navega al directorio del proyecto:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: "18.3" } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs["jsx-runtime"].rules,
-  },
-});
-```
+   ```bash
+   cd fast-react-pizza
+   ```
+
+3. Instala las dependencias:
+
+   ```bash
+   npm install
+   ```
+
+## Uso
+
+1. Inicia el servidor de desarrollo:
+
+   ```bash
+   npm start
+   ```
+
+2. Abre tu navegador y navega a `http://localhost:5173`.
+
+## Tecnologías Utilizadas
+
+- **React**: Biblioteca frontend para construir interfaces de usuario.
+- **JavaScript (ES6+)**: Lenguaje de programación principal.
+- **CSS**: Estilos para la aplicación.
+- **HTML**: Lenguaje de marcado para estructurar la aplicación.
+
+---
+
+¡Feliz codificación! 🍕
