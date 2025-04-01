@@ -91,7 +91,6 @@ function CreateOrder() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
-    console.log(withPriority);
     formData.append("order_price", totalCartPrice.toString());
     formData.append(
       "estimated_delivery",
