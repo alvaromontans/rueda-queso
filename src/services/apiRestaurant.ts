@@ -65,3 +65,15 @@ export async function deleteOrder(id: string) {
     throw Error('Failed deleting your order');
   }
 }
+
+export async function checkOrderExists(orderId: string): Promise<boolean> {
+  try {
+    const res = await fetch(`${API_URL}/order/${orderId}`, {
+      method: 'HEAD',
+    });
+
+    return res.ok;
+  } catch {
+    throw Error('Failed checking if the order exists');
+  }
+}
