@@ -1,3 +1,16 @@
+/**
+ * Maneja la creación de un nuevo pedido y redirige a la página de detalles del pedido.
+ *
+ * Esta función se utiliza como una acción en una ruta de React Router. Procesa la
+ * solicitud entrante, genera un ID único para el pedido, verifica su unicidad en
+ * la base de datos, construye un objeto de pedido, despacha el thunk de creación
+ * del pedido y finalmente redirige a la página de detalles del pedido recién creado.
+ *
+ * @param request - El objeto de solicitud entrante que contiene los datos del formulario del pedido.
+ * @returns Una respuesta de redirección a la página de detalles del pedido recién creado.
+ *
+ * @throws Lanzará un error si el proceso de creación del pedido falla.
+ */
 import { redirect } from "react-router-dom";
 import { Order } from "../interfaces/Order";
 import store from "../store";

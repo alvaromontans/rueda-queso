@@ -1,3 +1,10 @@
+/**
+ * Un componente funcional de React que muestra un mensaje indicando que el carrito está vacío.
+ * Incluye un botón para navegar de regreso al menú y anima al usuario a añadir pizzas.
+ *
+ * @component
+ * @returns {JSX.Element} El componente EmptyCart renderizado.
+ */
 import LinkButton from "../../ui/LinkButton";
 
 function EmptyCart() {

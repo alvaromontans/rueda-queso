@@ -1,3 +1,18 @@
+/**
+ * Obtiene la dirección del usuario basada en su geolocalización.
+ * 
+ * Este thunk asíncrono realiza los siguientes pasos:
+ * 1. Recupera la posición de geolocalización del usuario utilizando la API `navigator.geolocation`.
+ * 2. Utiliza una API de geocodificación inversa para convertir las coordenadas de geolocalización en una dirección legible.
+ * 3. Devuelve un objeto que contiene la posición y la dirección del usuario.
+ * 
+ * @async
+ * @function fetchAddress
+ * @returns {Promise<{ position: { latitude: number; longitude: number }; address: string }>} 
+ * Un objeto que contiene la posición de geolocalización y la dirección del usuario.
+ * 
+ * @throws Lanzará un error si no se puede recuperar la posición de geolocalización o si falla la API de geocodificación inversa.
+ */
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { getAddress } from "../../services/apiGeocoding";
 import { User } from "../../interfaces/User";

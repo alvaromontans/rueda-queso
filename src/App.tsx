@@ -1,30 +1,32 @@
+/**
+ * El componente principal de la aplicación que configura la aplicación React.
+ *
+ * Este componente envuelve la aplicación con `StrictMode` de React para resaltar posibles problemas,
+ * y `Suspense` para manejar componentes cargados de forma diferida con un cargador de respaldo.
+ * También integra el `RouterProvider` para el enrutamiento y `Toaster` para mostrar notificaciones emergentes.
+ *
+ * @component
+ * @returns {JSX.Element} El componente raíz de la aplicación.
+ *
+ * @see {@link https://react.dev/docs/strict-mode | React StrictMode}
+ * @see {@link https://react.dev/docs/react-api#suspense | React Suspense}
+ * @see {@link https://reactrouter.com/en/main/router-provider | RouterProvider}
+ * @see {@link https://react-hot-toast.com/docs | react-hot-toast}
+ */
 import { RouterProvider } from "react-router-dom";
 import router from "./routes";
 import { StrictMode, Suspense } from "react";
 import { Toaster } from "react-hot-toast";
+import Loader from "./ui/Loader";
+import { TOAST_OPTIONS } from "./constants";
 
 function App() {
   return (
     <StrictMode>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <RouterProvider router={router} />
       </Suspense>
-      <Toaster
-        position="top-center"
-        gutter={12}
-        containerStyle={{ margin: "8px" }}
-        toastOptions={{
-          success: { duration: 3000 },
-          error: { duration: 5000 },
-          style: {
-            fontSize: "16px",
-            maxWidth: "500px",
-            padding: "16px 24px",
-            backgroundColor: "bg-green-500",
-            color: "text-gray-700",
-          },
-        }}
-      />
+      <Toaster {...TOAST_OPTIONS} />
     </StrictMode>
   );
 }

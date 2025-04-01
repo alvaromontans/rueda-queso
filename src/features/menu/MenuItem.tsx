@@ -1,3 +1,34 @@
+/**
+ * Componente que representa un elemento individual del menú de pizzas.
+ *
+ * @param {Object} props - Las propiedades del componente.
+ * @param {Pizza} props.pizza - El objeto pizza que contiene los detalles del elemento del menú.
+ * @returns {JSX.Element} Un elemento de lista (`<li>`) que muestra los detalles de la pizza, precio y acciones del carrito.
+ *
+ * @remarks
+ * - Muestra el nombre, ingredientes, precio e imagen de la pizza.
+ * - Si la pizza está agotada, muestra un mensaje de "Agotado" y desactiva las acciones del carrito.
+ * - Si la pizza ya está en el carrito, muestra opciones para actualizar la cantidad o eliminar el elemento.
+ * - De lo contrario, proporciona un botón para añadir la pizza al carrito.
+ *
+ * @example
+ * ```tsx
+ * const pizza = {
+ *   _id: "123",
+ *   name: "Margherita",
+ *   unit_price: 10,
+ *   ingredients: ["tomate", "mozzarella", "albahaca"],
+ *   sold_out: false,
+ *   image_url: "https://example.com/margherita.jpg",
+ * };
+ *
+ * <MenuItem pizza={pizza} />
+ * ```
+ *
+ * @see {@link ../../interfaces/Pizza} para la interfaz `Pizza`.
+ * @see {@link ../../interfaces/Cart} para la interfaz `Cart`.
+ * @see {@link ../cart/cartSlice} para las acciones y selectores relacionados con el carrito.
+ */
 import { useAppDispatch, useAppSelector } from "../../hooks";
 import { Cart } from "../../interfaces/Cart";
 import { Pizza } from "../../interfaces/Pizza";
