@@ -50,7 +50,7 @@
 ## Tecnologías Utilizadas
 
 - **React**: Biblioteca frontend para construir interfaces de usuario.
-- **JavaScript (ES6+)**: Lenguaje de programación principal.
+- **Typescript**: Lenguaje de programación principal.
 - **CSS**: Estilos para la aplicación.
 - **HTML**: Lenguaje de marcado para estructurar la aplicación.
 
