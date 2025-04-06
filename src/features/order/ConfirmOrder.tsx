@@ -20,14 +20,18 @@
  */
 import { useFetcher } from "react-router-dom";
 import Button from "../../ui/Button";
+import { useAppDispatch } from "../../hooks";
+import { resetUserState } from "../user/userSlice";
 
 function ConfirmOrder({ orderId }: { orderId: string }) {
   const fetcher = useFetcher();
+  const dispatch = useAppDispatch();
 
   function handleUpdate(e: React.FormEvent) {
     e.preventDefault();
     const formData = new FormData();
     formData.append("order_id", orderId);
+    dispatch(resetUserState());
     fetcher.submit(formData, { method: "DELETE" });
   }
 

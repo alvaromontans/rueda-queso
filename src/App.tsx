@@ -1,8 +1,8 @@
 /**
  * El componente principal de la aplicación que configura la aplicación React.
  *
- * Este componente envuelve la aplicación con `StrictMode` de React para resaltar posibles problemas,
- * y `Suspense` para manejar componentes cargados de forma diferida con un cargador de respaldo.
+ * Este componente envuelve la aplicación con el componente `Suspense`
+ * para manejar componentes cargados de forma diferida con un cargador de respaldo.
  * También integra el `RouterProvider` para el enrutamiento y `Toaster` para mostrar notificaciones emergentes.
  *
  * @component
@@ -15,19 +15,19 @@
  */
 import { RouterProvider } from "react-router-dom";
 import router from "./routes";
-import { StrictMode, Suspense } from "react";
+import { Suspense } from "react";
 import { Toaster } from "react-hot-toast";
 import Loader from "./ui/Loader";
 import { TOAST_OPTIONS } from "./constants";
 
 function App() {
   return (
-    <StrictMode>
+    <>
       <Suspense fallback={<Loader />}>
         <RouterProvider router={router} />
       </Suspense>
       <Toaster {...TOAST_OPTIONS} />
-    </StrictMode>
+    </>
   );
 }
 

@@ -1,6 +1,6 @@
-# Fast React Pizza Co
+# Rueda del Queso
 
-¡Bienvenido al proyecto **Fast React Pizza Co.**! Esta es una aplicación basada en React diseñada para gestionar y mostrar un sistema de pedidos de pizza. El proyecto está construido con prácticas modernas de desarrollo web y tiene como objetivo proporcionar una experiencia de usuario fluida.
+¡Bienvenido al proyecto **Rueda del Queso**! Esta es una aplicación basada en React diseñada para gestionar y mostrar un sistema de pedidos de pizza. El proyecto está construido con prácticas modernas de desarrollo web y tiene como objetivo proporcionar una experiencia de usuario fluida.
 
 ## Tabla de Contenidos
 
@@ -22,13 +22,13 @@
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/your-username/fast-react-pizza.git
+   git clone https://github.com/alvaromontans/rueda-queso
    ```
 
 2. Navega al directorio del proyecto:
 
    ```bash
-   cd fast-react-pizza
+   cd rueda-queso
    ```
 
 3. Instala las dependencias:
@@ -42,7 +42,7 @@
 1. Inicia el servidor de desarrollo:
 
    ```bash
-   npm start
+   npm run dev
    ```
 
 2. Abre tu navegador y navega a `http://localhost:5173`.

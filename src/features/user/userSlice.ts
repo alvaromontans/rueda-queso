@@ -51,9 +51,28 @@ const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    updateName(state, action: PayloadAction<string>) {
+    /**
+     * Actualiza el nombre de usuario en el estado del usuario.
+     * 
+     * @function updateName
+     * @param {User} state - El estado del usuario.
+     * @param {PayloadAction<string>} action - La acción que contiene el nuevo nombre de usuario.
+     */
+    updateName(state: User, action: PayloadAction<string>) {
       state.username = action.payload
-    }
+    },
+    /**
+     * Restablece el estado del usuario a su estado inicial.
+     * 
+     * Esta función se utiliza cuando el usuario cierra sesión. Restablece el estado del usuario a su estado inicial, 
+     * lo que significa que el nombre de usuario, posición, dirección y estado se restablecen a sus valores iniciales.
+     * 
+     * @function resetUserState
+     * @returns {User} El estado inicial del usuario.
+     */
+    resetUserState(): User {
+      return initialState;
+    },
   },
   extraReducers: (builder) =>
     builder.addCase(fetchAddress.pending, (state) => {
@@ -69,6 +88,6 @@ const userSlice = createSlice({
       })
 });
 
-export const { updateName } = userSlice.actions;
+export const { updateName, resetUserState } = userSlice.actions;
 
 export default userSlice.reducer;
