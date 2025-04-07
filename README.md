@@ -53,7 +53,3 @@
 - **Typescript**: Lenguaje de programación principal.
 - **CSS**: Estilos para la aplicación.
 - **HTML**: Lenguaje de marcado para estructurar la aplicación.
-
----
-
-¡Feliz codificación! 🍕
